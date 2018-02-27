@@ -5,6 +5,15 @@ body{
 	/*background: rgba(155,40,33,1);*/
 	color: white;
 }
+main{
+	margin-top: 15px;
+}
+footer{
+	border: 1px solid orange;
+	font-weight: bold; /*negritas*/
+	padding: 20px;
+	text-align: center;
+}
 header{
 	border: 1px solid black;
 	text-align: center;
@@ -15,6 +24,9 @@ header nav ul li
 	border: 1px solid black;
 	border-radius: 5px;
 	display: inline-block;
+	margin-right: 50px;
+	/*margin: 0px 50px 0px 0px;*/
+	padding: 5px 10px;
 	width: 100px;
 }
 header nav ul li:hover
@@ -23,8 +35,33 @@ header nav ul li:hover
 	border: 1px solid orange;
 	border-radius: 5px;
 	display: inline-block;
+	padding: 5px 10px;
 	width: 100px;
 }
+main section article{
+	border: 1px dashed black;
+	display: inline-block;
+	vertical-align: top;
+	width: 32.65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
