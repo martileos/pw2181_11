@@ -4,3 +4,39 @@ body{
 	margin: 0 auto;	
 	max-width: 1024px;
 }
+header{
+	background: #B3D8EB;
+}
+header form{
+	float: right;
+	margin-right: 20px;
+	margin-top: -40px;
+}
+header form input{
+	border-radius: 5px;
+}
+header form input[type="button"]{
+	background: green;
+	border: 1px solid green;
+	color: white;
+}
+header nav{
+	background: #026dc6;
+	border-radius: 5px;
+	margin: 0 auto;
+	padding: 2px 0px;
+	width: 99%;
+}
+header nav ul li{
+	color: white;
+	display: inline-block;
+	margin-right: 20px;
+}
+#logo{
+	margin-top: -150px;
+}
+
+
+
+
+
