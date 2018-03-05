@@ -6,6 +6,7 @@ body{
 }
 header{
 	background: #B3D8EB;
+	/*margin-bottom: 15px;*/
 }
 header form{
 	float: right;
@@ -35,6 +36,20 @@ header nav ul li{
 #logo{
 	margin-top: -150px;
 }
+#seccion01{
+	margin-top: 15px;
+}
+
+#seccion01 article {
+	text-align: center;
+}
+
+#seccion01 article img{
+	border: 5px solid rgba(150,150,150,0.5);
+	width: 98%;
+}
+
+
 
 
 
