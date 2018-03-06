@@ -48,6 +48,43 @@ header nav ul li{
 	border: 5px solid rgba(150,150,150,0.5);
 	width: 98%;
 }
+#seccion02{
+	margin-bottom: 50px;
+}
+#seccion02 article{
+	display: inline-block;
+	vertical-align: top;
+	width: 32.8%;
+}
+#seccion02 article input[type="submit"]{
+	background: white;
+	border-radius: 5px;
+	color: blue;
+	margin-left: 130px;
+}
+/*Puedo poner más de un selector para
+distintos atributos-valor*/
+.otraSeccion,.unaSeccion{
+	font-weight: bold; /*negritas*/
+}
+.otraSeccion{
+	font-size: 2.5em; /*2.5*16*/
+}
+/*Las clases de CSS comienzan con punto*/
+.unaSeccion{ /*una clase*/
+	font-size: 4.5em; /*4.5*16*/
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
