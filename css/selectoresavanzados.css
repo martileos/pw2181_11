@@ -1,0 +1,48 @@
+/*Imagen con atributo alt*/
+img[alt]{
+	border: 5px solid blue;
+}
+/*Imagen con atributo SRC cadena exacta*/
+img[src="img/logo.png"]{
+	width: 400px;
+}
+/*^ = circunflejo*/
+/*Imagen con atributo SRC con el inicio
+de la cadena*/
+img[src^="img/"]{
+	width: 15px;
+}
+/*Imagen con el atributo SRC al final
+de la cadena*/
+img[src$="png"]{
+	width: 25px;
+}
+/*Imagen con el atributo SRC en 
+cualquier parte de la cadena*/
+img[src*="mg/"]{
+	width: 1000px;
+}
+/*El caracter ~ indica que estos 
+selectores están separados por 
+espacios*/
+article[class~="resaltado"]{
+	border: 1px solid blue;
+}
+article[class~="archivo"]{
+	border: 1px solid red;
+}
+article[class~="ingles"]{
+	border: 1px solid green;
+}
+/*El caracter | indica que estos 
+selectores están separados por 
+guiones*/
+article[class|="ingles"]{
+	text-align: center;
+}
+
+
+
+
+
+
