@@ -1,6 +1,6 @@
 /*Imagen con atributo alt*/
 img[alt]{
-	border: 5px solid blue;
+	border:5px solid blue;
 }
 /*Imagen con atributo SRC cadena exacta*/
 img[src="img/logo.png"]{
@@ -10,36 +10,126 @@ img[src="img/logo.png"]{
 /*Imagen con atributo SRC con el inicio
 de la cadena*/
 img[src^="img/"]{
-	width: 15px;
+	width: 150px;
 }
-/*Imagen con el atributo SRC al final
+/*Imagen con atributo SRC con el final
 de la cadena*/
 img[src$="png"]{
-	width: 25px;
+	width: 250px;
 }
-/*Imagen con el atributo SRC en 
+/*Imagen con atributo SRC en
 cualquier parte de la cadena*/
 img[src*="mg/"]{
 	width: 1000px;
 }
 /*El caracter ~ indica que estos 
-selectores están separados por 
-espacios*/
+selectores están separados por espacios*/
 article[class~="resaltado"]{
-	border: 1px solid blue;
+	border: 1px dashed blue;
 }
 article[class~="archivo"]{
-	border: 1px solid red;
+	border: 1px dashed red;
 }
 article[class~="ingles"]{
-	border: 1px solid green;
+	border: 1px dashed green;
 }
-/*El caracter | indica que estos 
-selectores están separados por 
-guiones*/
+/*El atributo class/id es una lista de 
+valores separados por guiones*/
 article[class|="ingles"]{
 	text-align: center;
 }
+
+/*Selector de secundarios.
+Seleccionar solamente las <p>
+que se encuentran inmediatamente
+después del <div>*/
+div > p{ /*solo hijos directos*/
+	color: blue;
+}
+/*Todos los elemento <p> serán
+seleccionados*/
+div p{
+	color: red;
+}
+
+/*Seleccionar solo el elemento <p> que
+está inmediatamente después del elemento
+<h2>*/
+h2 + p{
+	color:green;
+}
+
+/*Seleccionar todos los hermanos del 
+tipo de elemento especificado
+(Hermano general)*/
+h2 ~ p{
+	color:gray;
+}
+
+/*Poner en color rojo el texto de las secciones
+menos el id="referencias"*/
+#resumen,#experimento,#pruebas,#resultados,#conclusiones
+{
+	color: tomato;
+}
+/*Poner en color rosa el texto de las secciones
+menos el id="referencias"*/
+section:not(#referencias){
+	color:hotpink;
+}
+
+/*Seleccionar elementos LI impares*/
+li:nth-child(odd) /*impar*/
+{
+	color:green;
+}
+/*Seleccionar elementos LI pares*/
+li:nth-child(even) /*par*/
+{
+	color:blue;
+}
+
+li:nth-child(5) /*quinto elemento*/
+{
+	color:red;
+}
+/*Primer elemento de abajo hacia arriba*/
+li:nth-last-child(1)
+{
+	color:purple;
+}
+/*Verificar compatibilidad con 
+el navegador*/
+article:first-child /*nth-child(1)*/
+{
+	color:blue;
+}
+article:last-child /*nth-last-child(1)*/
+{
+	color:yellow;
+}
+/*Primer línea de un párrafo*/
+p:first-line{
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
