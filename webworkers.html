@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>WebWorkers HTML5</title>
+</head>
+<body>
+	<p>Contar números: <div id="resultado"></div></p>
+	<button onclick="iniciarWorker();">Iniciar</button>
+	<button onclick="pararWorker();">Detener</button>
+	<p></p>
+	<p>Contar números: <div id="resultado2"></div></p>
+	<button onclick="iniciarWorker2();">Iniciar</button>
+	<button onclick="pararWorker2();">Detener</button>
+	<script>
+		var w1,w2;
+		function iniciarWorker(){
+			//Preguntamos si el navegador lo soporta.
+			if(typeof(w1) == "undefined"){//funciona
+				w1=new Worker("demoWorker.js");
+				w1.onmessage = function(event){
+					document.getElementById("resultado").innerHTML=event.data;
+				}
+			}else{
+				alert("El navegador no soporta WebWorkers");
+			}
+		}
+		function pararWorker(){
+			w1.terminate();
+			w1 = undefined;
+		}
+		function iniciarWorker2(){
+			//Preguntamos si el navegador lo soporta.
+			if(typeof(w2) == "undefined"){//funciona
+				w2=new Worker("demoWorker.js");
+				w2.onmessage = function(event){
+					document.getElementById("resultado2").innerHTML=event.data;
+				}
+			}else{
+				alert("El navegador no soporta WebWorkers");
+			}
+		}
+		function pararWorker(){
+			w2.terminate();
+			w2 = undefined;
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
