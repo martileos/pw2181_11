@@ -17,6 +17,8 @@ function muestraPantallaPrincipal(){
 		protocol: 'file',
 		slashes: true
 	}));
+	//Clic derecho, inspeccionar en chrome
+	PantallaPrincipal.webContents.openDevTools();
 	//Mostramos la pantalla
 	PantallaPrincipal.show();
 }
