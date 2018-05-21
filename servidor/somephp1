@@ -1,0 +1,27 @@
+Instrucciones :
+ * Implementa leer varios Dogos (15)
+ * Implementa leer 1 Dogo (15)
+ * Implementa Actualizar 1 Dogo (15)
+ * Implementa Crear 1 Dogo (15)
+ * Implementa Borrar 1 Dogo (20)
+ * Poner en git. (+5)
+
+Minimo 40 para pasar. 
+En AzDogoEntity en el constructor por default asignar 
+
+public static string PARTITION = "DAGO";
+        public AzDogoEntity()
+        {
+            PartitionKey = PARTITION;
+        }
+
+Tienen (+10) No acumulable por tarea . 
+Gonzalez Najar
+Rivas Carrillo
+Mendoza Lopez
+Ramirez Sainz 
+Rodriguez Beltran
+
+Insuficiente en git ... 
+Alapizco 
+
