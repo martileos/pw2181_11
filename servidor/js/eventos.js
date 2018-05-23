@@ -1,5 +1,3 @@
-
-
 var inicioApp = function(){
 	var Aceptar = function(){
 		event.preventDefault();
@@ -17,7 +15,8 @@ var inicioApp = function(){
 			data: parametros,
 			success:function(response){
 				if(response.respuesta == true){
-					alert("Bienvenido");
+					//alert("Bienvenido");
+					$("#secInicio").hide("slow");
 				}else{
 					alert("usuario o clave incorrecta(s)");
 				}
