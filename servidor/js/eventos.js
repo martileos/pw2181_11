@@ -67,15 +67,26 @@ var inicioApp = function(){
 		var usuario=$("#txtNombreUsuario").val();
 		var nombre =$("#txtNombre").val();
 		var clave  =$("#txtClaveUsuario").val();
+		var parametros = "opc=guardarusuario"+
+						 "&usuario="+usuario+
+						 "&nombre="+nombre+
+						 "&clave="+clave+
+						 "&aleatorio="+Math.random();
 		if(usuario!="" && nombre!="" && clave!=""){
 			$.ajax({
 				cache:false,
 				type: "POST",
 				dataType: "json",
-				url: "php/buscausuario.php",
+				url: "php/guardarusuario.php",
 				data: parametros,
 				success:function(response){
-					
+					if(response.respuesta == true){
+						alert("Cambios guardados con éxito");
+						$("#frmUsuarios > input").val("");
+						$("#txtNombreUsuario").focus();
+					}else{
+						alert("Ocurrió un error, intente más tarde");
+					}
 				},
 				error:function(xhr,ajaxOptions,thrownError){
 
