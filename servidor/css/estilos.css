@@ -4,10 +4,10 @@ body{
 	margin: 0 auto;
 	max-width: 1024px;
 }
-#frmUsuarios{
+#frmUsuarios,#frmListado{
 	display: none;
 }
-#secInicio,#frmUsuarios{
+#secInicio,#frmUsuarios,#frmListado{
 	margin: 0 auto;
 	margin-top: 50px;
 	width: 450px;

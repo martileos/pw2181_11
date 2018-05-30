@@ -126,10 +126,37 @@ var inicioApp = function(){
 		}
 	}
 
+	var Listado = function(){
+		//Ocultamos todas las secciones dentro de main
+		$("main > section").hide("slow");
+		//Aparecemos el listado
+		$("#frmListado").show("slow");
+		var parametros="opc=listado"+
+					   "&aleatorio="+Math.random();
+		 $.ajax({
+			cache:false,
+			type: "POST",
+			dataType: "json",
+			url: "php/listado.php",
+			data: parametros,
+			success:function(response){
+				if(response.respuesta == true){
+					$("#tblListado").append(response.tabla);
+				}else{
+					alert("Ocurrió un error, intente más tarde");
+				}
+			},
+			error:function(xhr,ajaxOptions,thrownError){
+
+			}
+		});		
+	}
+
 	$("#btnAceptar").on("click",Aceptar);
 	$("#txtNombreUsuario").on("keypress",teclaNombreUsuario);
 	$("#btnGuardar").on("click",Guardar);
 	$("#btnBorrar").on("click",Borrar);
+	$("#btnListado").on("click",Listado);
 	$("#frmUsuarios").hide();
 }
 $(document).ready(inicioApp);
